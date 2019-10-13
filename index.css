@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body {
+  text-align: center;
+  font-family: "Open Sans", Arial;
+  margin: 0;
+  background-color: #84dccf;
+  font-size: 0.9em;
+}
+
+#navbar {
+  text-align: right;
+  font-size: 0.9em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #312f2f;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  padding-right: 10px;
+}
+
+#welcome-section {
+  height: 100vh;
+  border-bottom: solid;
+  border-color: #cccccc;
+  border-width: thin;
+}
+
+#projects {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f4ffe6;
+}
+
+#projects p {
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#tribute {
+  grid-area: tribute;
+}
+
+#survey {
+  grid-area: survey;
+}
+
+#product {
+  grid-area: product;
+}
+
+#technical {
+  grid-area: technical;
+}
+
+#portfolio {
+  grid-area: portfolio;
+}
+
+#soon {
+  grid-area: soon;
+}
+
+.projects-grid {
+  display: grid;
+  justify-content: space-evenly;
+  align-content: center;
+  grid-template-areas:
+    "tribute"
+    "survey"
+    "product"
+    "technical"
+    "portfolio"
+    "soon";
+}
+
+.project-tile {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  margin: 20px 0px 20px 0px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 10px;
+  border-color: grey;
+  background-color: #ddffb3;
+}
+
+.project-tile h3 {
+  border-bottom: solid;
+  border-width: thin;
+  border-color: grey;
+  padding-bottom: 15px;
+}
+
+.project-tile img {
+  width: 100%;
+  max-width: 270px;
+}
+
+#contact {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f4ffe6;
+}
+
+#contact p {
+  text-align: left;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+#link {
+  grid-area: link;
+}
+
+#git {
+  grid-area: git;
+}
+
+#camp {
+  grid-area: camp;
+}
+
+.contacts-grid {
+  display: grid;
+  justify-content: space-evenly;
+  align-content: center;
+  grid-template-areas:
+    "link"
+    "git"
+    "camp";
+}
+
+.contact-tile {
+  margin: 20px 0px 20px 0px;
+}
+
+.contact-tile a {
+  color: black;
+}
+
+footer {
+  text-align: right;
+  font-size: 0.8em;
+  border-top: solid;
+  border-top-color: #cccccc;
+  border-top-width: thin;
+  padding-right: 7px;
+}
+
+@media only screen and (min-width: 700px) {
+  .projects-grid {
+    grid-template-areas:
+      "tribute survey"
+      "product technical"
+      "portfolio soon";
+  }
+
+  .contacts-grid {
+    grid-template-areas: "link git camp";
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .projects-grid {
+    grid-template-areas:
+      "tribute survey product"
+      "technical portfolio soon";
+  }
+}
